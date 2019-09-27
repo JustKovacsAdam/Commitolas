@@ -56,7 +56,7 @@ namespace Project
             }
             catch
             {
-
+                Console.WriteLine("Nem elfogadott karakter használat!");
             }
         }
     }

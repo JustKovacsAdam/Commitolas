@@ -28,14 +28,15 @@ namespace Project
                 int i = 0;
                 while (i < Convert.ToInt32(darab))
                 {
-                    Console.Write("Kérem adja meg az " + (i+1) + ". számot a " + darab + "-ból: ");
+                    Console.Write("Kérem adja meg az " + (i+1) + ". számot a" + darab + " : ");
                     szamok.Add(Convert.ToInt32(Console.ReadLine()));
                     i++;
                 }
 
                 int max = szamok[0];
                 int maxIndex = 0;
-
+                int min = szamok[0];
+                int minIndex = 0;
 
                 for (int j = 0; j < szamok.Count; j++)
                 {
@@ -44,9 +45,13 @@ namespace Project
                         max = szamok[j];
                         maxIndex = j;
                     }
-
+                    if (szamok[j] < min)
+                    {
+                        min = szamok[j];
+                        minIndex = j;
+                    }
                 }
-                Console.WriteLine("A legnagyobb szám az: " + szamok[maxIndex]);
+                Console.WriteLine("A legnagyobb szám az: " + szamok[maxIndex] + "\nA legkisebb szám az: " + szamok[minIndex]);
 
             }
             catch

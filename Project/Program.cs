@@ -20,13 +20,15 @@ namespace Project
 
         static void Bekeres()
         {
+            Console.WriteLine("Kérem adja meg hogy hány számot akar beírni: ");
+            String darab = Console.ReadLine();
 
             try
             {
                 int i = 0;
-                while (i < 10)
+                while (i < Convert.ToInt32(darab))
                 {
-                    Console.Write("Kérem adja meg az " + (i+1) + ". számot a 10-ből: ");
+                    Console.Write("Kérem adja meg az " + (i+1) + ". számot a " + darab + "-ból: ");
                     szamok.Add(Convert.ToInt32(Console.ReadLine()));
                     i++;
                 }
